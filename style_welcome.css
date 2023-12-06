@@ -1,0 +1,71 @@
+
+body{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    margin-left: 220px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#logo{
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#homepage-title{
+    font-size: 90px;
+    width: 500px;
+    line-height: 70px;
+    margin-bottom: 45px;
+}
+
+.reduce-weight{
+    font-weight: lighter;
+}
+
+#instructions{
+    color: #D20094;
+    font-size: 35px;
+    margin-bottom: 7px;
+}
+
+#instructions-content{
+    width: 600px;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+#ul{
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 70px;
+}
+
+#checkbox{
+   margin-right: 7px;
+   cursor: pointer;
+}
+
+#promise{
+   font-size: 17px;
+   margin-right: 300px;
+}
+
+#welcome-proceed-button{
+  padding-left: 55px;
+  padding-right:55px ;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: #00FFFF;
+  color: purple;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 40px 10px #00FFFF;
+  font-weight: bold;
+}
+
