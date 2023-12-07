@@ -11,32 +11,39 @@
     <div id="main">
         <!-- div per  le icone superiori -->
         <div class="flex" id="up">
+            <!-- div contenente il logo Epicode -->
             <div id="logo">
                 <img src="assets/epicode_logo.png" alt="">
             </div>
+            <!-- div contenente il timer (per ora non funziona) -->
             <div id="circle">
                 <span id="time">20</span>
             </div>
         </div>
+        <!-- qua ci sono tutte le domande e relative risposte -->
        <div id="question">
+        <!-- div relativo alla domanda -->
         <div id="title">
             <span id="questionText"></span>
         </div>
+        <!-- div con tutte le possibili riposte tutte con impit radio -->
         <div class="flex" id="form">
             <input type="radio" class="input-radio" id="a0" value="0" name="form">
-            <label id="ans0" for="a0">test1</label>
+            <label id="ans0" for="a0"></label>
             <input type="radio" class="input-radio" id="a1" value="1" name="form">
-            <label id="ans1" for="a1">test2</label>
+            <label id="ans1" for="a1"></label>
             <input type="radio" class="input-radio" id="a2" value="2" name="form">
-            <label id="ans2" for="a2">test2</label>
+            <label id="ans2" for="a2"></label>
             <input type="radio" class="input-radio" id="a3" value="3" name="form">
-            <label id="ans3" for="a3">test3</label>
+            <label id="ans3" for="a3"></label>
         </div>
        </div>
+       <!-- div che sega i progressi nel rispondere alle domande -->
        <div id="count">
-        <p>Questions: <span id="progress">1</span><span id="pur"> / 10</span></p>
+        <p>QUESTION <span id="progress"></span><span id="pur"> / 10</span></p>
        </div> 
     </div>
+    <!-- collegamento allo script -->
     <script src="script_final.js"></script>
 </body>
 </html>
