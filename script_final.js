@@ -101,7 +101,19 @@ const questions = [
 let counter = 0;
 let score = 0;
 let isBool = false;
+let tot = document.getElementById("progress");
+tot.innerText = counter + 1;
+let isCheck = false;
 
+function check() {
+  let checkbox = document.getElementById("checkbox");
+  let control = document.getElementById("control");
+  if (checkbox.checked === true) {
+    control.href = "index.html";
+  } else {
+    control.href = "";
+  }
+}
 
 function questionLoad() {
   let questionTitle = document.getElementById("questionText");
@@ -109,12 +121,12 @@ function questionLoad() {
   console.log(questionTitle);
 }
 questionLoad();
-
+// funzione che carica le domande e imposta alcuni label nascosti nel caso in cui le risposte sono 4 o 2.
 function answerLoad() {
   let c = 0;
   let answers = [];
   let boolAnswers = [2, 3, 8];
-
+// veriica quante risposte ha la domanda
   for (let i = 0; i < boolAnswers.length; i++) {
     if (counter === boolAnswers[i]) {
       isBool = true;
@@ -123,7 +135,7 @@ function answerLoad() {
       isBool = false;
     }
   }
-
+// per selezionare una risposta random in cui posizionare la risposta corretta e quelle sbagliate
   rnd = isBool === false ? Math.floor(Math.random() * 4) : Math.floor(Math.random() * 2);
 
   rightAnswerCounter = rnd;
@@ -179,9 +191,31 @@ function verifyAnswer() { //verifica che la risposta checkata sia giusta
     console.log("risposta sbagliata!");
   }
   counter++;
+  // aggiorna il contatore delle domande rimaste, se supera il 10 si ferma
+  if (counter < 10) {
+    tot.innerText = counter + 1;
+  } else {
+    tot.innerText = 10;
+  }
+  console.log(tot.innerText);
   console.log("the score is "+ score);
   console.log("the counter is " + counter);
-   questionLoad();
-   answerLoad();
+  if (counter <= 10) {
+    questionLoad();
+    answerLoad();
+  } else {
+    displayScore();
+  }
+
+}
+function displayScore() { //funzione per mostrare il risultato
+  let answersDiv = document.getElementById("form");
+  let counterDiv = document.getElementById("count");
+  let clockDiv = document.getElementById("circle");
+  let questionTitle = document.getElementById("questionText");
+  answersDiv.style.display = "none";
+  counterDiv.style.display = "none";
+  clockDiv.style.display = "none";
+  questionTitle.innerText = "Your score is " + (score * 10) + " %";
 }
 
